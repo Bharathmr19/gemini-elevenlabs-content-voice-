@@ -52,41 +52,6 @@ VoicePrompt
 └── README.md
 ```
 
-## Setup Instructions
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/voiceprompt-ai.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd voiceprompt-ai
-   ```
-
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-4. Create a `.env` file in the root directory with your API keys:
-   ```
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
-   PORT=3001
-   ```
-
-5. Start the backend server:
-   ```bash
-   npm start
-   ```
-
-6. In a separate terminal, start the frontend server:
-   ```bash
-   npm run frontend
-   ```
-
-7. Open your browser and navigate to `http://localhost:8080` to access the application.
 
 ## Usage
 
@@ -114,41 +79,7 @@ VoicePrompt
   - Google Gemini 2.0 Flash for content generation
   - ElevenLabs for text-to-speech conversion
 - **Development Tools**: npm, nodemon, live-server
-
-## Project Structure
-
-```
-VoicePrompt
-├── frontend/
-│   └── src/
-│       ├── index.html          # Main HTML file
-│       ├── styles.css          # CSS styles with modern design
-│       └── scripts/
-│           ├── main.js         # Main JavaScript file
-│           ├── geminiService.js # Gemini API service
-│           └── speechService.js # ElevenLabs service
-├── backend/
-│   └── src/
-│       ├── app.js             # Express server setup
-│       ├── routes/
-│       │   └── api.js         # API routes
-│       ├── services/
-│       │   ├── geminiService.js # Gemini API integration
-│       │   └── elevenLabsService.js # ElevenLabs integration
-│       └── config/
-│           └── config.js      # Configuration
-├── .env                       # Environment variables
-├── package.json              # Project dependencies
-└── README.md                 # Project documentation
-```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+- 
 
 ## Acknowledgements
 
