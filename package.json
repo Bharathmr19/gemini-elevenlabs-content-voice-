@@ -1,0 +1,30 @@
+{
+  "name": "voiceprompt",
+  "version": "1.0.0",
+  "description": "A web application that generates articles using the Gemini API and reads them aloud using the ElevenLabs text-to-speech API.",
+  "main": "backend/src/app.js",
+  "scripts": {
+    "start": "node backend/src/app.js",
+    "dev": "nodemon backend/src/app.js",
+    "frontend": "cd frontend/src && live-server"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "keywords": [
+    "web",
+    "application",
+    "gemini",
+    "elevenlabs",
+    "text-to-speech"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

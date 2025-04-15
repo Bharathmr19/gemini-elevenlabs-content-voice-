@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoicePrompt AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <i class="fas fa-microphone-alt logo-icon"></i>
+                <h1>VoicePrompt<span class="highlight">AI</span></h1>
+            </div>
+            <p class="tagline">Generate AI content and listen to it with lifelike voices</p>
+        </header>
+
+        <main class="main-content">
+            <section class="input-section">
+                <div class="prompt-container">
+                    <label for="promptInput">Enter your prompt:</label>
+                    <div class="input-group">
+                        <textarea id="promptInput" placeholder="What would you like to generate? (e.g., 'Write a short story about a robot learning to paint')"></textarea>
+                        <button id="clearButton" class="icon-button" title="Clear input">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="suggestion-chips">
+                        <button class="chip" data-prompt="Write a short story about time travel">Story</button>
+                        <button class="chip" data-prompt="Explain quantum computing to a 10-year-old">Explanation</button>
+                        <button class="chip" data-prompt="List 5 tips for productivity">List</button>
+                        <button class="chip" data-prompt="Write a poem about nature">Poem</button>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="generateButton" class="primary-button">
+                        <i class="fas fa-magic"></i> Generate
+                    </button>
+                    <div class="voice-selector">
+                        <label for="voiceSelect">Voice:</label>
+                        <select id="voiceSelect">
+                            <option value="default">Default Voice</option>
+                            <option value="male">Male Voice</option>
+                            <option value="female">Female Voice</option>
+                            <option value="british">British Accent</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <section class="output-section">
+                <div class="output-header">
+                    <h2>Generated Content</h2>
+                    <div class="output-controls">
+                        <button id="copyButton" class="icon-button" title="Copy to clipboard">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <button id="readAloudButton" class="icon-button" title="Read aloud">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button id="downloadButton" class="icon-button" title="Download audio">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="articleDisplay" class="article-display">
+                    <div class="placeholder-content">
+                        <i class="fas fa-robot placeholder-icon"></i>
+                        <p>Your generated content will appear here</p>
+                    </div>
+                </div>
+                <div id="audioPlayer" class="audio-player hidden">
+                    <div class="player-controls">
+                        <button id="playPauseButton" class="player-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Powered by Gemini AI & ElevenLabs | <a href="#" id="aboutLink">About</a></p>
+        </footer>
+
+        <div id="loadingOverlay" class="loading-overlay hidden">
+            <div class="spinner"></div>
+            <p id="loadingMessage">Generating content...</p>
+        </div>
+
+        <div id="aboutModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>About VoicePromptAI</h2>
+                <p>VoicePromptAI is a web application that generates articles using the Gemini API and reads them aloud using the ElevenLabs Text-to-Speech API.</p>
+                <p>This application demonstrates the power of combining AI text generation with advanced text-to-speech technology.</p>
+                <h3>Features:</h3>
+                <ul>
+                    <li>Generate high-quality content with Gemini AI</li>
+                    <li>Convert text to lifelike speech with ElevenLabs</li>
+                    <li>Multiple voice options</li>
+                    <li>Download audio files</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
