@@ -9,7 +9,6 @@
 
 VoicePrompt AI is a modern web application that generates high-quality content using the Gemini API and reads it aloud using the ElevenLabs Text-to-Speech API. The application features a beautiful, responsive UI built with HTML, CSS, and JavaScript for the frontend, and utilizes Node.js with Express for the backend.
 
-![VoicePrompt AI Screenshot](https://via.placeholder.com/800x450.png?text=VoicePrompt+AI+Screenshot)
 
 ## Features
 
